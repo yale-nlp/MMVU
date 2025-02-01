@@ -32,7 +32,7 @@ MMVU is designed to **bridge this gap** and offer a **multidisciplinary** perspe
 ### 1. Setup
 Install the required packages and Setup up `.env` file
 ```bash
-pip install -r requirements.txt
+pip install -r requirements/general.txt
 ```
 
 

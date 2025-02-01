@@ -48,6 +48,15 @@ def prepare_base64frames(model_name, video_url, total_frames, video_tmp_dir):
     
     return base64frames
 
+
+def prepare_base64_video(video_url):
+    video_path, video_id = download_video(video_url)
+
+    video_base = base64.b64encode(open(video_path, "rb").read()).decode('utf-8')
+
+    return video_base
+
+
 def prepare_gemini_video_input(video_path):
     video_path, _ = download_video(video_path)
 

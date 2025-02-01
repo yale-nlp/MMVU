@@ -17,8 +17,10 @@ def main(
     n: int=1)-> None:
     if "gpt-4o" in model_name:
         from model_inference.azure_gpt import generate_response
-    elif "gemini" in model_name or "grok" in model_name or "glm" in model_name:
+    elif "gemini" in model_name or "grok" in model_name:
         from model_inference.openai_compatible import generate_response
+    elif "glm-4v" in model_name:
+        from model_inference.glm4v import generate_response
     elif "claude" in model_name:
         from model_inference.claude import generate_response
     elif model_name in json.load(open("model_inference/vllm_model_list.json")):
@@ -26,7 +28,9 @@ def main(
     elif "InternVideo2" in model_name:
         from model_inference.internvideo import generate_response
     elif "VideoLLaMA2" in model_name:
-        from model_inference.damollama_video import generate_response
+        from model_inference.videollama2 import generate_response
+    elif "VideoLLaMA3" in model_name:
+        from model_inference.videollama3 import generate_response
     else:
         raise ValueError(f"Invalid model name: {model_name}")
     generate_response(model_name=model_name,

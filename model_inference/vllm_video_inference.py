@@ -25,6 +25,8 @@ model_example_map = {
     "deepseek-ai/deepseek-vl2-tiny": prepare_deepseek_vl2_inputs,
     "deepseek-ai/deepseek-vl2-small": prepare_deepseek_vl2_inputs,
     "rhymes-ai/Aria-Chat": prepare_aria_inputs,
+    "Qwen/Qwen2.5-VL-3B-Instruct": prepare_qwen2_inputs,
+    "Qwen/Qwen2.5-VL-7B-Instruct": prepare_qwen2_inputs,
 }
 
 vllm_model_list = list(model_example_map.keys())

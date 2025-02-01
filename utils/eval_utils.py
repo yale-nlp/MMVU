@@ -81,7 +81,7 @@ async def get_acc_async(examples, client):
         result = {
             "id": example["id"],
             "question": example["question"],
-            "choices": example["choices"] if "A" in example["choices"] else "",
+            "choices": example["choices"],
             "response": example["response"],
             "ground_truth_answer": example["answer"],  
         }

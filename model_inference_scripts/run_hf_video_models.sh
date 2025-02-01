@@ -15,10 +15,14 @@ DATA_PATHS=(
 OPTIONS="--overwrite"
 
 # Model configurations (conda environment and model name)
+# videollama2 requirements: 
+# internvideo requirements:
 MODELS=(
   "internvideo:OpenGVLab/InternVideo2-Chat-8B"
   "videollama2:DAMO-NLP-SG/VideoLLaMA2-7B-16F"
   "videollama2:DAMO-NLP-SG/VideoLLaMA2.1-7B-16F"
+  "videollama2:DAMO-NLP-SG/VideoLLaMA3-7B"
+  "videollama2:DAMO-NLP-SG/VideoLLaMA3-2B"
 )
 
 PROMPTS=(

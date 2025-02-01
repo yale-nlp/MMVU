@@ -22,7 +22,7 @@ MODELS=(
   "gemini-2.0-flash-thinking-exp-1219:32"
   "gpt-4o:32"
   "gpt-4o-mini:32"
-  "glm-4v-plus-0111:4"
+  "glm-4v-plus-0111:-1" # use video input
   "claude-3-5-sonnet-20241022:32"
   "grok-2-vision-latest:16"
 )
