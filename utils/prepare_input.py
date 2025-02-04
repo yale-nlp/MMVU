@@ -1,4 +1,4 @@
-from utils.video_process import read_video, download_video, prepare_base64frames, prepare_gemini_video_input
+from utils.video_process import read_video, download_video, prepare_base64frames, prepare_gemini_video_input, prepare_base64_video
 from utils.constant import COT_PROMPT
 import google.generativeai as genai
 import requests
@@ -82,17 +82,20 @@ def prepare_qa_inputs(model_name, queries, total_frames, prompt=COT_PROMPT):
             if "gemini" in model_name:
                 video_file = prepare_gemini_video_input(query['video'])
                 prompt_message = [video_file, qa_text_prompt]
-            elif model_name in ["GLM-4V-Plus-0111","glm-4v-plus", "glm-4v"]:
+            elif model_name in ["glm-4v-plus-0111","glm-4v-plus", "glm-4v"]:
                 video_url = query['video']
+                base64_video = prepare_base64_video(video_url)
                 prompt_message = [
                     {
                         "role": "user",
                         "content": [
                             {"type": "text", "text": qa_text_prompt},
-                            {"type": "video_url", "video_url": {"url": video_url}}
+                            {"type": "video_url", "video_url": {"url": base64_video}}
                         ] 
                     }
                 ]
+            else:
+                raise ValueError(f"Invalid model name: {model_name}")
 
         messages.append(prompt_message)
     return messages

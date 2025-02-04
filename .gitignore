@@ -176,3 +176,4 @@ video_cache
 # yoga_32_frames
 # yoga_64_frames
 # VLMEvalKit
+local_inference_scripts
