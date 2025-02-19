@@ -10,7 +10,7 @@ import requests
 import numpy.typing as npt
 import json
 
-def download_video(video_url, video_tmp_dir = "video_cache"):
+def download_video(video_url, video_tmp_dir = "/gpfs/radev/home/yz979/scratch/video_cache"):
     video_id = hashlib.md5(video_url.encode()).hexdigest()
     video_subdir = os.path.join(video_tmp_dir, video_id)
     os.makedirs(video_subdir, exist_ok=True)
