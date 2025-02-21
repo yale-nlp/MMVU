@@ -19,6 +19,8 @@ OPTIONS="--overwrite"
 # internvideo requirements:
 MODELS=(
   "internvideo:OpenGVLab/InternVideo2-Chat-8B"
+  "internvideo:OpenGVLab/InternVideo2_5_Chat_8B"
+  "internvideo:OpenGVLab/VideoChat-Flash-Qwen2-7B_res448"
   "videollama2:DAMO-NLP-SG/VideoLLaMA2-7B-16F"
   "videollama2:DAMO-NLP-SG/VideoLLaMA2.1-7B-16F"
   "videollama2:DAMO-NLP-SG/VideoLLaMA3-7B"

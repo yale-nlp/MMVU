@@ -25,10 +25,14 @@ def main(
         from model_inference.claude import generate_response
     elif model_name in json.load(open("model_inference/vllm_model_list.json")):
         from model_inference.vllm_video_inference import generate_response
+    elif "InternVideo2_5" in model_name:
+        from model_inference.internvideo2_5 import generate_response
     elif "InternVideo2" in model_name:
         from model_inference.internvideo import generate_response
     elif "VideoLLaMA2" in model_name:
         from model_inference.videollama2 import generate_response
+    elif "VideoChat" in model_name:
+        from model_inference.videochat import generate_response
     elif "VideoLLaMA3" in model_name:
         from model_inference.videollama3 import generate_response
     else:
