@@ -14,7 +14,7 @@
 
 
 ## 📰 News
-
+- **2025-02-21**: We released our [evaluation results](https://huggingface.co/datasets/yale-nlp/MMVU-evaluation-results) on all the models that we have tested so far. If you are interested in doing some fine-grained analysis on these results, feel free to use them!
 - **2025-01-21**: We are excited to release the MMVU paper, dataset, and evaluation code!
 
 ## 👋 Overview
@@ -76,7 +76,7 @@ The evaluation results will be saved in the `outputs/evaluation_results/` direct
 
 
 ## 📋 Results from Existing Models
-We release full results on the validation set (i.e., generated responses, accuracy measurement done by GPT-4o) for all models we tested in our [HuggingFace Repo (Coming Soon!)](https://huggingface.co/datasets/yale-nlp/MMVU_model_outputs). If you are interested in doing some fine-grained analysis on these results, feel free to use them!
+We release full results on the validation set (i.e., generated responses, accuracy measurement done by GPT-4o) for all models we tested in our [HuggingFace Repo](https://huggingface.co/datasets/yale-nlp/MMVU-evaluation-results). If you are interested in doing some fine-grained analysis on these results, feel free to use them!
 
 ## 🥇 Leaderboard Submission
 The MMVU test set remains hidden from the public to minimize data contamination and ensure an unbiased evaluation of model capabilities. We are developing an online submission system for the leaderboard. 
