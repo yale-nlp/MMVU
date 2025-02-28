@@ -46,8 +46,8 @@ pip install -r requirements/general.txt
     "metadata": {
         "subject": // Subject of the example
         "textbook": // From which textbook the example is curated from
-        "rationale": // rationale for the answer (Coming Soon!)
-        "knowledge": // List of wikipedia URLs for the domain knowledge (Coming Soon!)
+        "rationale": // Annotated rationale for the answer, proofread by GPT-4o
+        "knowledge": // List of wikipedia URLs for the domain knowledge
     },
     "question":  // The question
     "choices": // choices for multiple-choice questions
